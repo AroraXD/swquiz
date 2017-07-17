@@ -33,13 +33,6 @@ var Quiz = function(){
 
       if ( chosenAnswer == correctAnswer ) {
         numberOfCorrectAnswers++;
-
-        // highlight this as correct answer
-        //$this.find('.quiz-answer.active').addClass('correct');
-      }
-      else {
-        //$this.find('.quiz-answer[data-quiz-answer="'+correctAnswer+'"]').addClass('correct');
-      //  $this.find('.quiz-answer.active').addClass('incorrect');
       }
     });
     if ( numberOfCorrectAnswers < 3 ) {
