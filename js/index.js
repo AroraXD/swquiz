@@ -42,7 +42,7 @@ var Quiz = function(){
       return {code: 'mid', text: 'Offline copy of pages <br> You expand the offline capabilties of your website. You keep a copy of every page visted by a user in the cache, so when they are offline you can show it to them again.'};
     }
     else if ( numberOfCorrectAnswers > 4 ) {
-      return {code: 'good', text: 'Cache first network <br> '};
+      return {code: 'good', text: 'Cache first network <br> You  pre-cache content. As soon as the site loads you are there preparing for when it goes offline. Like a squirrel storing arcons for the winter you store files in the cache for when the site goes offline. '};
     }
   }
   this._isComplete = function(){
