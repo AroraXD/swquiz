@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Service Worker Quiz</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <script>
+  //This is the service worker with the Cache-first network
+
+//Add this below content to your HTML page, or add the js file to your page at the very top to register sercie worker
+if (navigator.serviceWorker.controller) {
+console.log('[PWA Builder] active service worker found, no need to register')
+} else {
+
+//Register the ServiceWorker
+navigator.serviceWorker.register('pwabuilder-sw.js', {
+  scope: './'
+}).then(function(reg) {
+  console.log('Service worker has been registered for scope:'+ reg.scope);
+});
+}
+  </script>
+</head>
+
+<body>
+
+
+  <div class="quiz">
+
+    <h1>What type of <a href="youneedtobeonlinetoviewthispage.html">service worker</a> are you?</h1>
+
+
+  <h2 class="quiz-question">Q1: What is your favorite type of weather?</h2>
+  <ul data-quiz-question="1">
+    <li class="quiz-answer" data-quiz-answer="a">a. Sunny</li>
+    <li class="quiz-answer" data-quiz-answer="b">b. Rainy</li>
+    <li class="quiz-answer" data-quiz-answer="c">c. Cloudy</li>
+    <li class="quiz-answer" data-quiz-answer="d">d. Snowy</li>
+  </ul>
+
+  <h2 class="quiz-question">Q2: Pick a pizza topping?</h2>
+  <ul data-quiz-question="2">
+    <li class="quiz-answer" data-quiz-answer="a">a. Pepperoni</li>
+    <li class="quiz-answer" data-quiz-answer="b">b. Pinapple</li>
+    <li class="quiz-answer" data-quiz-answer="c">c. Extra Cheese</li>
+    <li class="quiz-answer" data-quiz-answer="d">d. Sweetcorn</li>
+    <li class="quiz-answer" data-quiz-answer="e">e. I don't like pizza</li>
+
+  </ul>
+
+  <h2 class="quiz-question">Q3: Which of these colours do you like the most?</h2>
+  <ul data-quiz-question="3">
+    <li class="quiz-answer" data-quiz-answer="a">a. (0,0,255)</li>
+    <li class="quiz-answer" data-quiz-answer="b">b. #0000ff</li>
+    <li class="quiz-answer" data-quiz-answer="c">c. Blue</li>
+  </ul>
+
+  <h2 class="quiz-question">Q4: Ice Cream or Cake?</h2>
+  <ul data-quiz-question="4">
+    <li class="quiz-answer" data-quiz-answer="a">a. Ice Cream</li>
+    <li class="quiz-answer" data-quiz-answer="b">b. Cake</li>
+  </ul>
+
+  <h2 class="quiz-question">Q5: Pick an Emoji?</h2>
+  <ul data-quiz-question="5">
+    <li class="quiz-answer" data-quiz-answer="a">a. 😂</li>
+    <li class="quiz-answer" data-quiz-answer="b">b. ✨</li>
+    <li class="quiz-answer" data-quiz-answer="c">c. 🍪</li>
+    <li class="quiz-answer" data-quiz-answer="d">d. 💻</li>
+    <li class="quiz-answer" data-quiz-answer="e">e. 🗒️</li>
+    <li class="quiz-answer" data-quiz-answer="f">f. 👾</li>
+
+  </ul>
+
+  <h2 class="quiz-question">Q6: Pick one?</h2>
+  <ul data-quiz-question="6">
+    <li class="quiz-answer" data-quiz-answer="a">a. 1</li>
+    <li class="quiz-answer" data-quiz-answer="b">b. 2</li>
+    <li class="quiz-answer" data-quiz-answer="c">c. 3</li>
+    <li class="quiz-answer" data-quiz-answer="d">d. 4</li>
+  </ul>
+</div>
+
+<div class="quiz-result"></div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="../js/index.js"></script>
+
+</body>
+</html>
