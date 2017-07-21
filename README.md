@@ -1,3 +1,4 @@
 # swquiz
-service worker quiz
-find out what type of serive worker you are
+Service worker quiz.
+
+Find out what type of serive worker you are.
